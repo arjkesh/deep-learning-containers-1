@@ -124,6 +124,12 @@ def main():
     all_image_list = dlc_images.split(" ")
     standard_images_list = [image_uri for image_uri in all_image_list if "example" not in image_uri]
 
+    if test_type != 'sanity':
+        test_env_file = os.path.join(os.getenv("CODEBUILD_SRC_DIR_DLC_TESTS_JSON"), "test_type_images.json")
+        with open(test_env_file) as test_env:
+            LOGGER.info(f"Contents of {test_env_file}")
+            for line in test_env:
+                LOGGER.info(line)
     if test_type in ("sanity", "ecs", "ec2", "eks"):
         report = os.path.join(os.getcwd(), "test", f"{test_type}.xml")
 
