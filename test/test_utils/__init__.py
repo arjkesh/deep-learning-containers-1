@@ -280,7 +280,7 @@ def delete_uploaded_tests_from_s3(s3_test_location):
     run(f"aws s3 rm --recursive {s3_test_location}")
 
 
-def get_dlc_images(test_type):
+def get_dlc_images():
     if os.getenv("BUILD_CONTEXT") == "PR":
         return os.getenv("DLC_IMAGES")
     if test_type == "sanity":
@@ -290,6 +290,6 @@ def get_dlc_images(test_type):
     with open(test_env_file) as test_env:
         test_images = json.load(test_env)
     for dlc_test_type, images in test_images.items():
-        if test_type == dlc_test_type:
+        if dlc_test_type == "sanity":
             return " ".join(images)
-    raise RuntimeError(f"Cannot find any images for {test_type} in {test_images}")
+    raise RuntimeError(f"Cannot find any images for in {test_images}")
