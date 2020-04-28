@@ -283,10 +283,7 @@ def delete_uploaded_tests_from_s3(s3_test_location):
 def get_dlc_images():
     if os.getenv("BUILD_CONTEXT") == "PR":
         return os.getenv("DLC_IMAGES")
-    if test_type == "sanity":
-        test_env_file = os.path.join(os.getenv("CODEBUILD_SRC_DIR_DLC_IMAGES_JSON"), "test_type_images.json")
-    else:
-        test_env_file = os.path.join(os.getenv("CODEBUILD_SRC_DIR_DLC_TESTS_JSON"), "test_type_images.json")
+    test_env_file = os.path.join(os.getenv("CODEBUILD_SRC_DIR_DLC_IMAGES_JSON"), "test_type_images.json")
     with open(test_env_file) as test_env:
         test_images = json.load(test_env)
     for dlc_test_type, images in test_images.items():
