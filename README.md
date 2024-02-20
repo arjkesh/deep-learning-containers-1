@@ -4,7 +4,7 @@ AWS [Deep Learning Containers (DLCs)](https://docs.aws.amazon.com/deep-learning-
 are a set of Docker images for training and serving models in TensorFlow, TensorFlow 2, PyTorch, and MXNet. 
 Deep Learning Containers provide optimized environments with TensorFlow and MXNet, Nvidia CUDA (for GPU instances), and 
 Intel MKL (for CPU instances) libraries and 
-are available in the Amazon Elastic Container Registry Amazon ECR). 
+are available in the Amazon Elastic Container Registry Amazon ECR). test
 
 The AWS DLCs are used in Amazon SageMaker as the default vehicles for your SageMaker jobs such as training, inference, 
 transforms etc. They've been tested for machine
