@@ -252,53 +252,11 @@ AutoGluon Inference Containers
 | AutoGluon 1.3.0 | 1.3.0              | inference | GPU     | 3.11 (py311)             | 763104351884.dkr.ecr.us-west-2.amazonaws.com/autogluon-inference:1.3.0-gpu-py311-cu124-ubuntu22.04 |
 | AutoGluon 1.3.0 | 1.3.0              | inference | CPU     | 3.11 (py311)             | 763104351884.dkr.ecr.us-west-2.amazonaws.com/autogluon-inference:1.3.0-cpu-py311-ubuntu22.04       |
 
-HuggingFace Training Containers
+[HuggingFace Containers](https://huggingface.co/docs/sagemaker/en/dlcs/available)
 ===============================
 
-| Framework                                     |Job Type	|CPU/GPU 	|Python Version Options	|Example URL                                                                                                                        |
-|-----------------------------------------------|-----------|-----------|-----------------------|-----------------------------------------------------------------------------------------------------------------------------------|
-|PyTorch 2.1.0 with HuggingFace transformers    |training	|GPU 		| 3.10 (py310)			|763104351884.dkr.ecr.us-east-1.amazonaws.com/huggingface-pytorch-training:2.1.0-transformers4.36.0-gpu-py310-cu121-ubuntu20.04     |
-|PyTorch 2.0.0 with HuggingFace transformers    |training	|GPU 		| 3.10 (py310)			|763104351884.dkr.ecr.us-east-1.amazonaws.com/huggingface-pytorch-training:2.0.0-transformers4.28.1-gpu-py310-cu118-ubuntu20.04     |
-|PyTorch 1.13.1 with HuggingFace transformers   |training	|GPU 		| 3.9 (py39)			|763104351884.dkr.ecr.us-east-1.amazonaws.com/huggingface-pytorch-training:1.13.1-transformers4.26.0-gpu-py39-cu117-ubuntu20.04     |
-|TensorFlow 2.6.3 with HuggingFace transformers |training	|GPU 		| 3.8 (py38)			|763104351884.dkr.ecr.us-east-1.amazonaws.com/huggingface-tensorflow-training:2.6.3-transformers4.17.0-gpu-py38-cu112-ubuntu20.04 	|
+To see a list of the latest Hugging Face containers that you can use to train and deploy models from the Hub on CPU, GPU,and Neuron, please see https://huggingface.co/docs/sagemaker/en/dlcs/available.
 
-
-HuggingFace Inference Containers
-===============================
-
-| Framework                                        |Job Type	|CPU/GPU 	|Python Version Options	|Example URL                                                                                                                        |
-|--------------------------------------------------|------------|-----------|-----------------------|-----------------------------------------------------------------------------------------------------------------------------------|
-|PyTorch 2.1.0 with HuggingFace transformers       |inference	|CPU 		| 3.10 (py310)			|763104351884.dkr.ecr.us-east-1.amazonaws.com/huggingface-pytorch-inference:2.1.0-transformers4.37.0-cpu-py310-ubuntu22.04		    |
-|PyTorch 2.1.0 with HuggingFace transformers       |inference	|GPU 		| 3.10 (py310)			|763104351884.dkr.ecr.us-east-1.amazonaws.com/huggingface-pytorch-inference:2.1.0-transformers4.37.0-gpu-py310-cu118-ubuntu20.04    |
-|PyTorch 2.0.0 with HuggingFace transformers       |inference	|CPU 		| 3.10 (py310)			|763104351884.dkr.ecr.us-east-1.amazonaws.com/huggingface-pytorch-inference:2.0.0-transformers4.28.1-cpu-py310-ubuntu20.04		    |
-|PyTorch 2.0.0 with HuggingFace transformers       |inference	|GPU 		| 3.10 (py310)			|763104351884.dkr.ecr.us-east-1.amazonaws.com/huggingface-pytorch-inference:2.0.0-transformers4.28.1-gpu-py310-cu118-ubuntu20.04    |
-|PyTorch 1.13.1 with HuggingFace transformers      |inference	|CPU 		| 3.9 (py39)			|763104351884.dkr.ecr.us-east-1.amazonaws.com/huggingface-pytorch-inference:1.13.1-transformers4.26.0-cpu-py39-ubuntu20.04		    |
-|PyTorch 1.13.1 with HuggingFace transformers      |inference	|GPU 		| 3.9 (py39)			|763104351884.dkr.ecr.us-east-1.amazonaws.com/huggingface-pytorch-inference:1.13.1-transformers4.26.0-gpu-py39-cu117-ubuntu20.04    |
-|TensorFlow 2.11.1 with HuggingFace transformers   |inference	|CPU 		| 3.9 (py39)			|763104351884.dkr.ecr.us-east-1.amazonaws.com/huggingface-tensorflow-inference:2.11.1-transformers4.26.0-cpu-py39-ubuntu20.04		|
-|TensorFlow 2.11.1 with HuggingFace transformers   |inference	|GPU 		| 3.9 (py39)			|763104351884.dkr.ecr.us-east-1.amazonaws.com/huggingface-tensorflow-inference:2.11.1-transformers4.26.0-gpu-py39-cu112-ubuntu20.04	|
-
-HuggingFace Text Generation Inference (TGI) Containers
-===============================
-
-Please refer to the following pages to view all available versions and tags for GPU and NeuronX containers:
-* [GPU Release Page](https://github.com/aws/deep-learning-containers/releases?q=tgi+AND+gpu&expanded=true)
-* [NeuronX Release Page](https://github.com/aws/deep-learning-containers/releases?q=tgi+AND+neuronx&expanded=true)
-
-HuggingFace Neuron Inference Containers
-===============================
-
-|Framework                                                         |Neuron SDK Version |Job Type   |Supported EC2 Instance Type |Python Version Options |Example URL                                                                                                                                   |
-|------------------------------------------------------------------|-------------------|-----------|----------------------------|-----------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
-|PyTorch 1.10.2 with Neuron Inference and HuggingFace transformers |Neuron 1.19.1      |inference  |inf1                        |3.7 (py37)             |763104351884.dkr.ecr.us-east-1.amazonaws.com/huggingface-pytorch-inference-neuron:1.10.2-transformers4.20.1-neuron-py37-sdk1.19.1-ubuntu18.04 |
-|PyTorch 1.13.1 with NeuronX Inference and HuggingFace transformers |Neuron 2.15.0      |inference  |inf2/trn1                        |3.10 (py310)             |763104351884.dkr.ecr.us-east-1.amazonaws.com/huggingface-pytorch-inference-neuronx:1.13.1-transformers4.34.1-neuronx-py310-sdk2.15.0-ubuntu20.04 |
-|PyTorch 2.1.2 with NeuronX Inference and HuggingFace transformers |Neuron 2.18.0      |inference  |inf2/trn1                        |3.10 (py310)             |763104351884.dkr.ecr.us-east-1.amazonaws.com/huggingface-pytorch-inference-neuronx:2.1.2-transformers4.36.2-neuronx-py310-sdk2.18.0-ubuntu20.04 |
-
-HuggingFace Neuron Training Containers
-===============================
-
-|Framework                                                         |Neuron SDK Version |Job Type   |Supported EC2 Instance Type |Python Version Options |Example URL                                                                                                                                   |
-|------------------------------------------------------------------|-------------------|-----------|----------------------------|-----------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
-|PyTorch 1.13.1 with NeuronX Training and HuggingFace transformers |Neuron 2.18.0      |training  |trn1                        |3.10 (py310)             |763104351884.dkr.ecr.us-east-1.amazonaws.com/huggingface-pytorch-training-neuronx:1.13.1-transformers4.36.2-neuronx-py310-sdk2.18.0-ubuntu20.04 |
 
 StabilityAI Inference Containers
 ===============================
